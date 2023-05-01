@@ -2,10 +2,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const name = "Bastos";
-const el = <p>Hello, {name}</p>;
+let counter = 0;
 
-root.render(
-  el, 
-  document.getElementById("root")
-); 
+function show() {
+    counter++;
+    const el = <p>{counter}</p>;
+    root.render(el, document.getElementById("root"));
+}
+
+setInterval(show, 1); 
