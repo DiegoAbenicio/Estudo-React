@@ -1,20 +1,5 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-function Counter() {
-  const [counter, setCounter] = useState(0);
-
-  function increment() {
-    setCounter(counter + 1);
-  }
-  return (
-    <div>
-      <p>{counter}</p>
-      <button onClick={increment}>Increment</button>
-    </div>
-  );
-}
-
-const el = <Counter />;
-ReactDOM.render(el, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);

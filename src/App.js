@@ -1,13 +1,19 @@
 import "./App.css";
-import Card from "./Card.js";
+//import Card from "./Card.js";
 
 function App() {
+
+  function handleClick() {
+    let randomNum = Math.floor(Math.random() * 3) + 1;
+    console.log(randomNum);
+    let userInput = prompt("Digite um numero");
+    alert(`Número computado: ${randomNum}, Seu chute: ${userInput}`);
+  }
+
   return (
     <div>
-      <h1>Task: Add three Card elements</h1>
-      <Card h2="First card's h2" h3="First card's h3" />
-      <Card h2="Second card's h2" h3="Second card's h3" />
-      <Card h2="Third card's h2" h3="Third card's h3" />
+      <h1>Tarefa: Adicione um botao e um evento</h1>
+      <button onClick={handleClick}>Chute um número de 1 a 3</button>
     </div>
   );
 }
