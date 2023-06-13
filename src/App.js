@@ -5,17 +5,24 @@ import "./App.css";
 //import FruitsCounter from "./FruitsCounter";
 import Homepage from "./Homepage";
 import AboutMe from "./AboutMe";
+import {Routes, Route, Link} from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="App">
       <nav className="nav">
-        <a href="#" className="nav-item">Homepage</a>
-        <a href="#" className="nav-item">AboutMe</a>
+        <Link to="/" className="nav-item">
+          Homepage
+        </Link>
+        <Link to="/about-me" className="nav-item">
+          AboutMe
+        </Link>
       </nav>
-      <Homepage />
-      <AboutMe />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about-me" element={<AboutMe />} />
+      </Routes>
     </div>
   );
 }
