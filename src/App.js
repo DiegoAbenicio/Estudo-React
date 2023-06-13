@@ -5,6 +5,7 @@ import "./App.css";
 //import FruitsCounter from "./FruitsCounter";
 import Homepage from "./Homepage";
 import AboutMe from "./AboutMe";
+import Contact from "./Contact";
 import {Routes, Route, Link} from 'react-router-dom';
 
 
@@ -18,10 +19,14 @@ function App() {
         <Link to="/about-me" className="nav-item">
           AboutMe
         </Link>
+        <Link to="/contact" className="nav-item">
+          Contact
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
